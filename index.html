@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Valentine 💖</title>
+<style>
+    body {
+        background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+        font-family: 'Comic Sans MS', cursive;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 3em;
+        color: #c2185b; /* dark pink */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 10px rgba(255, 105, 135, 0.6);
+    }
+
+    .center-gif {
+        width: 220px;
+        margin-bottom: 30px;
+        animation: bounce 2s infinite;
+    }
+
+    .button-row {
+        display: flex;
+        gap: 15px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    .yes {
+        background: #c2185b;
+        color: white;
+    }
+
+    .no {
+        background: white;
+        color: #c2185b;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+</style>
+</head>
+<body>
+
+<img src="bubu.gif" alt="Cute Love GIF" class="center-gif">
+
+<h1>Will you be my Valentine? 💖</h1>
+
+<div class="button-row">
+    <button class="btn yes" onclick="goToLove()">Yes 💕</button>
+    <button class="btn no" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<script>
+function goToLove() {
+    window.location.href = "love.html";
+}
+
+function moveNo() {
+    let btn = document.querySelector(".no");
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 50);
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
